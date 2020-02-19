@@ -1,0 +1,1 @@
+"%JAVA_HOME%\bin\java.exe" -Djavax.xml.accessExternalSchema=all -jar ..\..\..\tools\wsimport\jaxws-tools.jar -Xnocompile -p main.java.webservice http://localhost:8080/ServicioWebSOAP/soapws/client?wsdl
