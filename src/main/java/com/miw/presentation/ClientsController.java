@@ -36,5 +36,13 @@ public class ClientsController {
 		model.addAttribute("clients", clientws.listClientsOfHotel(1L));
 		return "listClients";
 	}
+	
+	@RequestMapping(value="/edit", method = RequestMethod.PUT)
+	public String editClient(Model model) throws ClientException_Exception, Exception_Exception {
+		ClientWSService service = new ClientWSService();
+		IClientWS clientws = service.getClientWSPort();
+		model.addAttribute("clients", clientws.listClientsOfHotel(1L));
+		return "listClients";
+	}
 
 }
