@@ -21,6 +21,11 @@ public class ClientsController {
 		return new Client();
 	}
 	
+	@RequestMapping(value="/add", method = RequestMethod.GET)
+	public String addClient() {
+		return "addClient";
+	}
+	
 	@RequestMapping(value="/add", method = RequestMethod.POST)
 	public String addClient(@ModelAttribute("client") Client client) throws ClientException_Exception, Exception_Exception {
 		ClientWSService service = new ClientWSService();

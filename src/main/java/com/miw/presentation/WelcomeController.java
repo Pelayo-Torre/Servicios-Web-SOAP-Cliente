@@ -22,7 +22,7 @@ public class WelcomeController {
 	@RequestMapping("/")
 	public String welcome()
 	{
-		return "login";
+		return "addClient";
 	}
 	
 	@ModelAttribute("client")
