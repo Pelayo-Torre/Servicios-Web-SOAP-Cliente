@@ -1,9 +1,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <header>
-	<h1 class="header">Hotel Manager</h1>
+	<h1 class="header">Hoteles Amazin</h1>
 	<spring:url value="/clients/add" var="newClient"></spring:url>
 	<spring:url value="/clients/list" var="listClients"></spring:url>
+	<spring:url value="/services/add" var="newService"></spring:url>
+	<spring:url value="/services/list" var="listServices"></spring:url>
 	
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 	  <!-- Links -->
@@ -28,8 +30,8 @@
 	        Servicios
 	      </a>
 	      <div class="dropdown-menu">
-	        <a class="dropdown-item" href="#">Nuevo Servicio</a>
-	        <a class="dropdown-item" href="#">Listado de Servicios</a>
+	        <a class="dropdown-item" href="${ newService }">Nuevo Servicio</a>
+	        <a class="dropdown-item" href="${ listServices }">Listado de Servicios</a>
 	      </div>
 	    </li>
 	    

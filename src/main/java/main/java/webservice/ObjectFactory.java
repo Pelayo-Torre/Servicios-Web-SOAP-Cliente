@@ -24,18 +24,21 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ClientException_QNAME = new QName("http://services.web/", "ClientException");
-    private final static QName _Exception_QNAME = new QName("http://services.web/", "Exception");
-    private final static QName _AddClient_QNAME = new QName("http://services.web/", "addClient");
-    private final static QName _AddClientResponse_QNAME = new QName("http://services.web/", "addClientResponse");
-    private final static QName _DeleteClient_QNAME = new QName("http://services.web/", "deleteClient");
-    private final static QName _DeleteClientResponse_QNAME = new QName("http://services.web/", "deleteClientResponse");
-    private final static QName _ListClient_QNAME = new QName("http://services.web/", "listClient");
-    private final static QName _ListClientResponse_QNAME = new QName("http://services.web/", "listClientResponse");
-    private final static QName _ListClientsOfHotel_QNAME = new QName("http://services.web/", "listClientsOfHotel");
-    private final static QName _ListClientsOfHotelResponse_QNAME = new QName("http://services.web/", "listClientsOfHotelResponse");
-    private final static QName _UpdateClient_QNAME = new QName("http://services.web/", "updateClient");
-    private final static QName _UpdateClientResponse_QNAME = new QName("http://services.web/", "updateClientResponse");
+    private final static QName _BookingException_QNAME = new QName("http://services.web/", "BookingException");
+    private final static QName _HotelException_QNAME = new QName("http://services.web/", "HotelException");
+    private final static QName _ServiceException_QNAME = new QName("http://services.web/", "ServiceException");
+    private final static QName _AddService_QNAME = new QName("http://services.web/", "addService");
+    private final static QName _AddServiceResponse_QNAME = new QName("http://services.web/", "addServiceResponse");
+    private final static QName _DeleteService_QNAME = new QName("http://services.web/", "deleteService");
+    private final static QName _DeleteServiceResponse_QNAME = new QName("http://services.web/", "deleteServiceResponse");
+    private final static QName _ListService_QNAME = new QName("http://services.web/", "listService");
+    private final static QName _ListServiceResponse_QNAME = new QName("http://services.web/", "listServiceResponse");
+    private final static QName _ListServicesOfBooking_QNAME = new QName("http://services.web/", "listServicesOfBooking");
+    private final static QName _ListServicesOfBookingResponse_QNAME = new QName("http://services.web/", "listServicesOfBookingResponse");
+    private final static QName _ListServicesOfHotel_QNAME = new QName("http://services.web/", "listServicesOfHotel");
+    private final static QName _ListServicesOfHotelResponse_QNAME = new QName("http://services.web/", "listServicesOfHotelResponse");
+    private final static QName _UpdateService_QNAME = new QName("http://services.web/", "updateService");
+    private final static QName _UpdateServiceResponse_QNAME = new QName("http://services.web/", "updateServiceResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: main.java.webservice
@@ -45,263 +48,334 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ClientException }
+     * Create an instance of {@link BookingException }
      * 
      */
-    public ClientException createClientException() {
-        return new ClientException();
+    public BookingException createBookingException() {
+        return new BookingException();
     }
 
     /**
-     * Create an instance of {@link Exception }
+     * Create an instance of {@link HotelException }
      * 
      */
-    public Exception createException() {
-        return new Exception();
+    public HotelException createHotelException() {
+        return new HotelException();
     }
 
     /**
-     * Create an instance of {@link AddClient }
+     * Create an instance of {@link ServiceException }
      * 
      */
-    public AddClient createAddClient() {
-        return new AddClient();
+    public ServiceException createServiceException() {
+        return new ServiceException();
     }
 
     /**
-     * Create an instance of {@link AddClientResponse }
+     * Create an instance of {@link AddService }
      * 
      */
-    public AddClientResponse createAddClientResponse() {
-        return new AddClientResponse();
+    public AddService createAddService() {
+        return new AddService();
     }
 
     /**
-     * Create an instance of {@link DeleteClient }
+     * Create an instance of {@link AddServiceResponse }
      * 
      */
-    public DeleteClient createDeleteClient() {
-        return new DeleteClient();
+    public AddServiceResponse createAddServiceResponse() {
+        return new AddServiceResponse();
     }
 
     /**
-     * Create an instance of {@link DeleteClientResponse }
+     * Create an instance of {@link DeleteService }
      * 
      */
-    public DeleteClientResponse createDeleteClientResponse() {
-        return new DeleteClientResponse();
+    public DeleteService createDeleteService() {
+        return new DeleteService();
     }
 
     /**
-     * Create an instance of {@link ListClient }
+     * Create an instance of {@link DeleteServiceResponse }
      * 
      */
-    public ListClient createListClient() {
-        return new ListClient();
+    public DeleteServiceResponse createDeleteServiceResponse() {
+        return new DeleteServiceResponse();
     }
 
     /**
-     * Create an instance of {@link ListClientResponse }
+     * Create an instance of {@link ListService }
      * 
      */
-    public ListClientResponse createListClientResponse() {
-        return new ListClientResponse();
+    public ListService createListService() {
+        return new ListService();
     }
 
     /**
-     * Create an instance of {@link ListClientsOfHotel }
+     * Create an instance of {@link ListServiceResponse }
      * 
      */
-    public ListClientsOfHotel createListClientsOfHotel() {
-        return new ListClientsOfHotel();
+    public ListServiceResponse createListServiceResponse() {
+        return new ListServiceResponse();
     }
 
     /**
-     * Create an instance of {@link ListClientsOfHotelResponse }
+     * Create an instance of {@link ListServicesOfBooking }
      * 
      */
-    public ListClientsOfHotelResponse createListClientsOfHotelResponse() {
-        return new ListClientsOfHotelResponse();
+    public ListServicesOfBooking createListServicesOfBooking() {
+        return new ListServicesOfBooking();
     }
 
     /**
-     * Create an instance of {@link UpdateClient }
+     * Create an instance of {@link ListServicesOfBookingResponse }
      * 
      */
-    public UpdateClient createUpdateClient() {
-        return new UpdateClient();
+    public ListServicesOfBookingResponse createListServicesOfBookingResponse() {
+        return new ListServicesOfBookingResponse();
     }
 
     /**
-     * Create an instance of {@link UpdateClientResponse }
+     * Create an instance of {@link ListServicesOfHotel }
      * 
      */
-    public UpdateClientResponse createUpdateClientResponse() {
-        return new UpdateClientResponse();
+    public ListServicesOfHotel createListServicesOfHotel() {
+        return new ListServicesOfHotel();
     }
 
     /**
-     * Create an instance of {@link Client }
+     * Create an instance of {@link ListServicesOfHotelResponse }
      * 
      */
-    public Client createClient() {
-        return new Client();
+    public ListServicesOfHotelResponse createListServicesOfHotelResponse() {
+        return new ListServicesOfHotelResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ClientException }{@code >}
+     * Create an instance of {@link UpdateService }
+     * 
+     */
+    public UpdateService createUpdateService() {
+        return new UpdateService();
+    }
+
+    /**
+     * Create an instance of {@link UpdateServiceResponse }
+     * 
+     */
+    public UpdateServiceResponse createUpdateServiceResponse() {
+        return new UpdateServiceResponse();
+    }
+
+    /**
+     * Create an instance of {@link ServiceDTO }
+     * 
+     */
+    public ServiceDTO createServiceDTO() {
+        return new ServiceDTO();
+    }
+
+    /**
+     * Create an instance of {@link ServiceAddDTO }
+     * 
+     */
+    public ServiceAddDTO createServiceAddDTO() {
+        return new ServiceAddDTO();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BookingException }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link ClientException }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link BookingException }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "ClientException")
-    public JAXBElement<ClientException> createClientException(ClientException value) {
-        return new JAXBElement<ClientException>(_ClientException_QNAME, ClientException.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "BookingException")
+    public JAXBElement<BookingException> createBookingException(BookingException value) {
+        return new JAXBElement<BookingException>(_BookingException_QNAME, BookingException.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Exception }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link HotelException }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link Exception }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link HotelException }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "Exception")
-    public JAXBElement<Exception> createException(Exception value) {
-        return new JAXBElement<Exception>(_Exception_QNAME, Exception.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "HotelException")
+    public JAXBElement<HotelException> createHotelException(HotelException value) {
+        return new JAXBElement<HotelException>(_HotelException_QNAME, HotelException.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddClient }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ServiceException }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link AddClient }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link ServiceException }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "addClient")
-    public JAXBElement<AddClient> createAddClient(AddClient value) {
-        return new JAXBElement<AddClient>(_AddClient_QNAME, AddClient.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "ServiceException")
+    public JAXBElement<ServiceException> createServiceException(ServiceException value) {
+        return new JAXBElement<ServiceException>(_ServiceException_QNAME, ServiceException.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddClientResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddService }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link AddClientResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link AddService }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "addClientResponse")
-    public JAXBElement<AddClientResponse> createAddClientResponse(AddClientResponse value) {
-        return new JAXBElement<AddClientResponse>(_AddClientResponse_QNAME, AddClientResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "addService")
+    public JAXBElement<AddService> createAddService(AddService value) {
+        return new JAXBElement<AddService>(_AddService_QNAME, AddService.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteClient }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddServiceResponse }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link DeleteClient }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link AddServiceResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "deleteClient")
-    public JAXBElement<DeleteClient> createDeleteClient(DeleteClient value) {
-        return new JAXBElement<DeleteClient>(_DeleteClient_QNAME, DeleteClient.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "addServiceResponse")
+    public JAXBElement<AddServiceResponse> createAddServiceResponse(AddServiceResponse value) {
+        return new JAXBElement<AddServiceResponse>(_AddServiceResponse_QNAME, AddServiceResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteClientResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteService }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link DeleteClientResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link DeleteService }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "deleteClientResponse")
-    public JAXBElement<DeleteClientResponse> createDeleteClientResponse(DeleteClientResponse value) {
-        return new JAXBElement<DeleteClientResponse>(_DeleteClientResponse_QNAME, DeleteClientResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "deleteService")
+    public JAXBElement<DeleteService> createDeleteService(DeleteService value) {
+        return new JAXBElement<DeleteService>(_DeleteService_QNAME, DeleteService.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListClient }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteServiceResponse }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link ListClient }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link DeleteServiceResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "listClient")
-    public JAXBElement<ListClient> createListClient(ListClient value) {
-        return new JAXBElement<ListClient>(_ListClient_QNAME, ListClient.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "deleteServiceResponse")
+    public JAXBElement<DeleteServiceResponse> createDeleteServiceResponse(DeleteServiceResponse value) {
+        return new JAXBElement<DeleteServiceResponse>(_DeleteServiceResponse_QNAME, DeleteServiceResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListClientResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListService }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link ListClientResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListService }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "listClientResponse")
-    public JAXBElement<ListClientResponse> createListClientResponse(ListClientResponse value) {
-        return new JAXBElement<ListClientResponse>(_ListClientResponse_QNAME, ListClientResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "listService")
+    public JAXBElement<ListService> createListService(ListService value) {
+        return new JAXBElement<ListService>(_ListService_QNAME, ListService.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListClientsOfHotel }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListServiceResponse }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link ListClientsOfHotel }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListServiceResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "listClientsOfHotel")
-    public JAXBElement<ListClientsOfHotel> createListClientsOfHotel(ListClientsOfHotel value) {
-        return new JAXBElement<ListClientsOfHotel>(_ListClientsOfHotel_QNAME, ListClientsOfHotel.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "listServiceResponse")
+    public JAXBElement<ListServiceResponse> createListServiceResponse(ListServiceResponse value) {
+        return new JAXBElement<ListServiceResponse>(_ListServiceResponse_QNAME, ListServiceResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListClientsOfHotelResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListServicesOfBooking }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link ListClientsOfHotelResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListServicesOfBooking }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "listClientsOfHotelResponse")
-    public JAXBElement<ListClientsOfHotelResponse> createListClientsOfHotelResponse(ListClientsOfHotelResponse value) {
-        return new JAXBElement<ListClientsOfHotelResponse>(_ListClientsOfHotelResponse_QNAME, ListClientsOfHotelResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "listServicesOfBooking")
+    public JAXBElement<ListServicesOfBooking> createListServicesOfBooking(ListServicesOfBooking value) {
+        return new JAXBElement<ListServicesOfBooking>(_ListServicesOfBooking_QNAME, ListServicesOfBooking.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateClient }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListServicesOfBookingResponse }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link UpdateClient }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListServicesOfBookingResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "updateClient")
-    public JAXBElement<UpdateClient> createUpdateClient(UpdateClient value) {
-        return new JAXBElement<UpdateClient>(_UpdateClient_QNAME, UpdateClient.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "listServicesOfBookingResponse")
+    public JAXBElement<ListServicesOfBookingResponse> createListServicesOfBookingResponse(ListServicesOfBookingResponse value) {
+        return new JAXBElement<ListServicesOfBookingResponse>(_ListServicesOfBookingResponse_QNAME, ListServicesOfBookingResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateClientResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListServicesOfHotel }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link UpdateClientResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListServicesOfHotel }{@code >}
      */
-    @XmlElementDecl(namespace = "http://services.web/", name = "updateClientResponse")
-    public JAXBElement<UpdateClientResponse> createUpdateClientResponse(UpdateClientResponse value) {
-        return new JAXBElement<UpdateClientResponse>(_UpdateClientResponse_QNAME, UpdateClientResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://services.web/", name = "listServicesOfHotel")
+    public JAXBElement<ListServicesOfHotel> createListServicesOfHotel(ListServicesOfHotel value) {
+        return new JAXBElement<ListServicesOfHotel>(_ListServicesOfHotel_QNAME, ListServicesOfHotel.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListServicesOfHotelResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ListServicesOfHotelResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://services.web/", name = "listServicesOfHotelResponse")
+    public JAXBElement<ListServicesOfHotelResponse> createListServicesOfHotelResponse(ListServicesOfHotelResponse value) {
+        return new JAXBElement<ListServicesOfHotelResponse>(_ListServicesOfHotelResponse_QNAME, ListServicesOfHotelResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateService }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link UpdateService }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://services.web/", name = "updateService")
+    public JAXBElement<UpdateService> createUpdateService(UpdateService value) {
+        return new JAXBElement<UpdateService>(_UpdateService_QNAME, UpdateService.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateServiceResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link UpdateServiceResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://services.web/", name = "updateServiceResponse")
+    public JAXBElement<UpdateServiceResponse> createUpdateServiceResponse(UpdateServiceResponse value) {
+        return new JAXBElement<UpdateServiceResponse>(_UpdateServiceResponse_QNAME, UpdateServiceResponse.class, null, value);
     }
 
 }

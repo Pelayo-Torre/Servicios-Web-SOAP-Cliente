@@ -16,8 +16,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/&gt;
- *         &lt;element name="arg1" type="{http://services.web/}client" minOccurs="0"/&gt;
+ *         &lt;element name="arg0" type="{http://services.web/}clientDTO" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -28,23 +27,21 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "updateClient", propOrder = {
-    "arg0",
-    "arg1"
+    "arg0"
 })
 public class UpdateClient {
 
-    protected Long arg0;
-    protected Client arg1;
+    protected ClientDTO arg0;
 
     /**
      * Obtiene el valor de la propiedad arg0.
      * 
      * @return
      *     possible object is
-     *     {@link Long }
+     *     {@link ClientDTO }
      *     
      */
-    public Long getArg0() {
+    public ClientDTO getArg0() {
         return arg0;
     }
 
@@ -53,35 +50,11 @@ public class UpdateClient {
      * 
      * @param value
      *     allowed object is
-     *     {@link Long }
+     *     {@link ClientDTO }
      *     
      */
-    public void setArg0(Long value) {
+    public void setArg0(ClientDTO value) {
         this.arg0 = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad arg1.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Client }
-     *     
-     */
-    public Client getArg1() {
-        return arg1;
-    }
-
-    /**
-     * Define el valor de la propiedad arg1.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Client }
-     *     
-     */
-    public void setArg1(Client value) {
-        this.arg1 = value;
     }
 
 }

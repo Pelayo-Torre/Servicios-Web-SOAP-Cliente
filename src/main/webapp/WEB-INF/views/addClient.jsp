@@ -21,10 +21,19 @@
 	<h3 class="centered">Nuevo cliente.</h3>
 	<br>
 	<section>
+		<c:if test="${ error ne '' }">
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">
+			  <strong>${error}</strong>
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+		</c:if>
+		
+		
 		<h6>Rellene el siguiente formulario</h6>
 		<div>
-			<form:form modelAttribute="client" action="clients/add" method="POST">
-			  <form:input path="hotelId" value="1" type="hidden"/>
+			<form:form modelAttribute="client" action="/Amazin/clients/add" method="POST">
 			  <div class="form-group">
 			    <label for="exampleInputEmail1">Nombre:</label>
 			    <form:input type="text" path="name" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Ej: Pablo Torre Corte" />

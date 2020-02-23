@@ -7,19 +7,20 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para client complex type.
+ * <p>Clase Java para hotel complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="client"&gt;
+ * &lt;complexType name="hotel"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="dni" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="hotelId" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/&gt;
+ *         &lt;element name="address" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="country" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="location" type="{http://services.web/}location" minOccurs="0"/&gt;
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="stars" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="telephone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -30,91 +31,93 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "client", propOrder = {
-    "dni",
-    "email",
-    "hotelId",
+@XmlType(name = "hotel", propOrder = {
+    "address",
+    "country",
+    "location",
     "name",
+    "stars",
     "telephone"
 })
-public class Client {
+public class Hotel {
 
-    protected String dni;
-    protected String email;
-    protected Long hotelId;
+    protected String address;
+    protected String country;
+    protected Location location;
     protected String name;
+    protected int stars;
     protected String telephone;
 
     /**
-     * Obtiene el valor de la propiedad dni.
+     * Obtiene el valor de la propiedad address.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDni() {
-        return dni;
+    public String getAddress() {
+        return address;
     }
 
     /**
-     * Define el valor de la propiedad dni.
+     * Define el valor de la propiedad address.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDni(String value) {
-        this.dni = value;
+    public void setAddress(String value) {
+        this.address = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad email.
+     * Obtiene el valor de la propiedad country.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEmail() {
-        return email;
+    public String getCountry() {
+        return country;
     }
 
     /**
-     * Define el valor de la propiedad email.
+     * Define el valor de la propiedad country.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEmail(String value) {
-        this.email = value;
+    public void setCountry(String value) {
+        this.country = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad hotelId.
+     * Obtiene el valor de la propiedad location.
      * 
      * @return
      *     possible object is
-     *     {@link Long }
+     *     {@link Location }
      *     
      */
-    public Long getHotelId() {
-        return hotelId;
+    public Location getLocation() {
+        return location;
     }
 
     /**
-     * Define el valor de la propiedad hotelId.
+     * Define el valor de la propiedad location.
      * 
      * @param value
      *     allowed object is
-     *     {@link Long }
+     *     {@link Location }
      *     
      */
-    public void setHotelId(Long value) {
-        this.hotelId = value;
+    public void setLocation(Location value) {
+        this.location = value;
     }
 
     /**
@@ -139,6 +142,22 @@ public class Client {
      */
     public void setName(String value) {
         this.name = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad stars.
+     * 
+     */
+    public int getStars() {
+        return stars;
+    }
+
+    /**
+     * Define el valor de la propiedad stars.
+     * 
+     */
+    public void setStars(int value) {
+        this.stars = value;
     }
 
     /**

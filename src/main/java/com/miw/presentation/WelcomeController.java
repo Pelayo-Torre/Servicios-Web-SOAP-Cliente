@@ -4,13 +4,8 @@ package com.miw.presentation;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
-import main.java.webservice.Client;
-import main.java.webservice.ClientException_Exception;
-import main.java.webservice.ClientWSService;
-import main.java.webservice.Exception_Exception;
-import main.java.webservice.IClientWS;
+import main.java.webservice.ClientAddDTO;
 
 
 @Controller
@@ -26,8 +21,8 @@ public class WelcomeController {
 	}
 	
 	@ModelAttribute("client")
-	public Client getClient() {
-		return new Client();
+	public ClientAddDTO getClient() {
+		return new ClientAddDTO();
 	}
 
 }

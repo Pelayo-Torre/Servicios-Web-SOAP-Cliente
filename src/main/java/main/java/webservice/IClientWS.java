@@ -30,65 +30,20 @@ public interface IClientWS {
      * 
      * @param arg0
      * @return
-     *     returns java.util.List<main.java.webservice.Client>
-     * @throws Exception_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listClientsOfHotel", targetNamespace = "http://services.web/", className = "main.java.webservice.ListClientsOfHotel")
-    @ResponseWrapper(localName = "listClientsOfHotelResponse", targetNamespace = "http://services.web/", className = "main.java.webservice.ListClientsOfHotelResponse")
-    @Action(input = "http://services.web/IClientWS/listClientsOfHotelRequest", output = "http://services.web/IClientWS/listClientsOfHotelResponse", fault = {
-        @FaultAction(className = Exception_Exception.class, value = "http://services.web/IClientWS/listClientsOfHotel/Fault/Exception")
-    })
-    public List<Client> listClientsOfHotel(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Long arg0)
-        throws Exception_Exception
-    ;
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns main.java.webservice.Client
-     * @throws Exception_Exception
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listClient", targetNamespace = "http://services.web/", className = "main.java.webservice.ListClient")
-    @ResponseWrapper(localName = "listClientResponse", targetNamespace = "http://services.web/", className = "main.java.webservice.ListClientResponse")
-    @Action(input = "http://services.web/IClientWS/listClientRequest", output = "http://services.web/IClientWS/listClientResponse", fault = {
-        @FaultAction(className = Exception_Exception.class, value = "http://services.web/IClientWS/listClient/Fault/Exception")
-    })
-    public Client listClient(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Long arg0)
-        throws Exception_Exception
-    ;
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     * @return
      *     returns java.lang.String
      * @throws ClientException_Exception
-     * @throws Exception_Exception
      */
     @WebMethod
     @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "updateClient", targetNamespace = "http://services.web/", className = "main.java.webservice.UpdateClient")
     @ResponseWrapper(localName = "updateClientResponse", targetNamespace = "http://services.web/", className = "main.java.webservice.UpdateClientResponse")
     @Action(input = "http://services.web/IClientWS/updateClientRequest", output = "http://services.web/IClientWS/updateClientResponse", fault = {
-        @FaultAction(className = ClientException_Exception.class, value = "http://services.web/IClientWS/updateClient/Fault/ClientException"),
-        @FaultAction(className = Exception_Exception.class, value = "http://services.web/IClientWS/updateClient/Fault/Exception")
+        @FaultAction(className = ClientException_Exception.class, value = "http://services.web/IClientWS/updateClient/Fault/ClientException")
     })
     public String updateClient(
         @WebParam(name = "arg0", targetNamespace = "")
-        Long arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        Client arg1)
-        throws ClientException_Exception, Exception_Exception
+        ClientDTO arg0)
+        throws ClientException_Exception
     ;
 
     /**
@@ -97,7 +52,47 @@ public interface IClientWS {
      * @return
      *     returns java.lang.String
      * @throws ClientException_Exception
-     * @throws Exception_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "deleteClient", targetNamespace = "http://services.web/", className = "main.java.webservice.DeleteClient")
+    @ResponseWrapper(localName = "deleteClientResponse", targetNamespace = "http://services.web/", className = "main.java.webservice.DeleteClientResponse")
+    @Action(input = "http://services.web/IClientWS/deleteClientRequest", output = "http://services.web/IClientWS/deleteClientResponse", fault = {
+        @FaultAction(className = ClientException_Exception.class, value = "http://services.web/IClientWS/deleteClient/Fault/ClientException")
+    })
+    public String deleteClient(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0)
+        throws ClientException_Exception
+    ;
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns main.java.webservice.ClientDTO
+     * @throws ClientException_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listClient", targetNamespace = "http://services.web/", className = "main.java.webservice.ListClient")
+    @ResponseWrapper(localName = "listClientResponse", targetNamespace = "http://services.web/", className = "main.java.webservice.ListClientResponse")
+    @Action(input = "http://services.web/IClientWS/listClientRequest", output = "http://services.web/IClientWS/listClientResponse", fault = {
+        @FaultAction(className = ClientException_Exception.class, value = "http://services.web/IClientWS/listClient/Fault/ClientException")
+    })
+    public ClientDTO listClient(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0)
+        throws ClientException_Exception
+    ;
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     * @throws HotelException_Exception
+     * @throws ClientException_Exception
      */
     @WebMethod
     @WebResult(targetNamespace = "")
@@ -105,32 +100,32 @@ public interface IClientWS {
     @ResponseWrapper(localName = "addClientResponse", targetNamespace = "http://services.web/", className = "main.java.webservice.AddClientResponse")
     @Action(input = "http://services.web/IClientWS/addClientRequest", output = "http://services.web/IClientWS/addClientResponse", fault = {
         @FaultAction(className = ClientException_Exception.class, value = "http://services.web/IClientWS/addClient/Fault/ClientException"),
-        @FaultAction(className = Exception_Exception.class, value = "http://services.web/IClientWS/addClient/Fault/Exception")
+        @FaultAction(className = HotelException_Exception.class, value = "http://services.web/IClientWS/addClient/Fault/HotelException")
     })
     public String addClient(
         @WebParam(name = "arg0", targetNamespace = "")
-        Client arg0)
-        throws ClientException_Exception, Exception_Exception
+        ClientAddDTO arg0)
+        throws ClientException_Exception, HotelException_Exception
     ;
 
     /**
      * 
      * @param arg0
      * @return
-     *     returns java.lang.String
-     * @throws Exception_Exception
+     *     returns java.util.List<main.java.webservice.ClientDTO>
+     * @throws HotelException_Exception
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "deleteClient", targetNamespace = "http://services.web/", className = "main.java.webservice.DeleteClient")
-    @ResponseWrapper(localName = "deleteClientResponse", targetNamespace = "http://services.web/", className = "main.java.webservice.DeleteClientResponse")
-    @Action(input = "http://services.web/IClientWS/deleteClientRequest", output = "http://services.web/IClientWS/deleteClientResponse", fault = {
-        @FaultAction(className = Exception_Exception.class, value = "http://services.web/IClientWS/deleteClient/Fault/Exception")
+    @RequestWrapper(localName = "listClientsOfHotel", targetNamespace = "http://services.web/", className = "main.java.webservice.ListClientsOfHotel")
+    @ResponseWrapper(localName = "listClientsOfHotelResponse", targetNamespace = "http://services.web/", className = "main.java.webservice.ListClientsOfHotelResponse")
+    @Action(input = "http://services.web/IClientWS/listClientsOfHotelRequest", output = "http://services.web/IClientWS/listClientsOfHotelResponse", fault = {
+        @FaultAction(className = HotelException_Exception.class, value = "http://services.web/IClientWS/listClientsOfHotel/Fault/HotelException")
     })
-    public String deleteClient(
+    public List<ClientDTO> listClientsOfHotel(
         @WebParam(name = "arg0", targetNamespace = "")
         Long arg0)
-        throws Exception_Exception
+        throws HotelException_Exception
     ;
 
 }

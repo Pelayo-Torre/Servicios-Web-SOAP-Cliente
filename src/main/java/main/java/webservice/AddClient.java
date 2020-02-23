@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="arg0" type="{http://services.web/}client" minOccurs="0"/&gt;
+ *         &lt;element name="arg0" type="{http://services.web/}clientAddDTO" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -31,17 +31,17 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class AddClient {
 
-    protected Client arg0;
+    protected ClientAddDTO arg0;
 
     /**
      * Obtiene el valor de la propiedad arg0.
      * 
      * @return
      *     possible object is
-     *     {@link Client }
+     *     {@link ClientAddDTO }
      *     
      */
-    public Client getArg0() {
+    public ClientAddDTO getArg0() {
         return arg0;
     }
 
@@ -50,10 +50,10 @@ public class AddClient {
      * 
      * @param value
      *     allowed object is
-     *     {@link Client }
+     *     {@link ClientAddDTO }
      *     
      */
-    public void setArg0(Client value) {
+    public void setArg0(ClientAddDTO value) {
         this.arg0 = value;
     }
 
