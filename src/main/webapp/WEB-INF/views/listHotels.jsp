@@ -17,62 +17,56 @@
 <body>
 	
 	<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
-	<h3 class="centered">Reservas del Cliente</h3>
+	<h3 class="centered">Hoteles</h3>
 	<br>
 	<section>
 		<article>
-			<spring:url value="/bookings/add/{idClient}" var="newClient">
-  				<spring:param name="idClient" value="${ idClient }" />
-		 	</spring:url>
-			<a id="newBooking" class="btn btn-primary" href="${ newClient }" role="button">Nueva Reserva</a>
-			<br><br>
+			<label class="mytitle">Listado de hoteles:</label><br>
 			<table class="table table-striped">
 			  <thead class="thead-dark">
 			    <tr>
-			      <th scope="col">Fecha de Inicio</th>
-			      <th scope="col">Fecha de Finalización</th>
-			      <th scope="col">Precio</th>
-			      <th scope="col">Cancelada</th>
+			      <th scope="col">Nombre</th>
+			      <th scope="col">Email</th>
+			      <th scope="col">DNI</th>
+			      <th scope="col">Telefono</th>
+			      <th scope="col">Estado</th>
 			      <th scope="col"></th>
 				  <th scope="col"></th>
 			    </tr>
 			  </thead>
 			  <tbody>
-			  	<c:forEach var="booking" items="${bookings}">
+			  	<c:forEach var="client" items="${clients}">
 			  	
-		  			<spring:url value="/bookings/edit/{idClient}/{id}" var="edit">
-		  				<spring:param name="idClient" value="${ idClient }" />
-				   		<spring:param name="id" value="${ booking.idBooking }" />
+		  			<spring:url value="/clients/edit/{id}" var="edit">
+				   		<spring:param name="id" value="${ client.idClient }" />
 				 	</spring:url>
 				 
-					 <spring:url value="/bookings/desactivate/{idClient}/{id}" var="desactivate">
-					 	<spring:param name="idClient" value="${ idClient }" />
-					    <spring:param name="id" value="${ booking.idBooking }" />
+					 <spring:url value="/clients/desactivate/{id}" var="desactivate">
+					   <spring:param name="id" value="${ client.idClient }" />
 					 </spring:url>
 					 
-					 <spring:url value="/bookings/add/services/{idBooking}/{idClient}" var="services">
-					    <spring:param name="idBooking" value="${ booking.idBooking }" />
-					    <spring:param name="idClient" value="${ idClient }" />
+					 <spring:url value="/bookings/list/{idClient}" var="bookings">
+					   <spring:param name="idClient" value="${ client.idClient }" />
 					 </spring:url>
 			  	
-			  	
-			  	
 				    <tr>
-				      <th scope="row">${booking.startDate }</th>
-				      <td>${booking.endDate }</td>
-				      <td>${booking.price } euros</td>
-				      				      
-				      <c:if test="${ booking.cancelled == '1' }">
-				      	<td>CANCELADA</td>
-				      	<td><a href="${ edit }" title="Editar"><span class="fas fa-edit"></span></a></td>
-				      </c:if>
-				      <c:if test="${ booking.cancelled == '0' }">
-				      	<td>NO CANCELADA</td>
+				      <th scope="row">${client.name }</th>
+				      <td>${client.email }</td>
+				      <td>${client.dni }</td>
+				      
+				      <td>${client.telephone }</td>
+				      
+				      <c:if test="${ client.active == '1' }">
+				      	<td>ACTIVO</td>
 				      	<td><a href="${ edit }" title="Editar"><span class="fas fa-edit"></span></a>  |  
 				      	<a href="${ desactivate }" title="Desactivar"><span class="fas fa-trash"></span></a></td>
 				      </c:if>
+				      <c:if test="${ client.active == '0' }">
+				      	<td>INACTIVO</td>
+				      	<td><a href="${ edit }" title="Editar"><span class="fas fa-edit"></span></a></td>
+				      </c:if>
 				      
-				      <td><a class="btn btn-primary" href="${ services }" role="button">Servicios</a></td>
+				      <td><a class="btn btn-primary" href="${ bookings }" role="button">Reservas</a></td>
 				      
 				    </tr>
 			  	

@@ -31,20 +31,26 @@
 		</c:if>
 		
 		
-		<h6>Rellene el siguiente formulario</h6>
+		<h6>Lista de servicios disponibles</h6>
 		<div>
-			<form:form modelAttribute="booking" action="/Amazin/bookings/add" method="POST">
+			<form:form modelAttribute="serviceBooking" action="/Amazin/bookings/add/services" method="POST">
+			  <form:input path="idBooking" type="hidden" value="${idBooking}"/>
 			  <form:input path="idClient" type="hidden" value="${idClient}"/>
 			  <div class="form-group">
-			    <label for="exampleInputEmail1">Fecha de Inicio:</label>
-			    <form:input type="text" path="startDate" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Ej: 22-10-2020" />
-			    <small id="nameHelp" class="form-text text-muted">Fecha de comienzo de reserva</small>
+			  
+			  	<c:forEach var="service" items="${services}">
+			  	
+			  		<c:if test="${service.selected}">
+			  			<form:checkbox checked ="true" path="seleccionados" value="${service.idService}"/>${service.name} 
+			  		</c:if>	
+			  		<c:if test="${not service.selected}">
+			  			<form:checkbox path="seleccionados" value="${service.idService}"/>${service.name} 
+			  		</c:if>			  		
+			  	
+			  	</c:forEach>
+			  				  
 			  </div>
-			  <div class="form-group">
-			    <label for="exampleInputEmail1">Fecha de Finalización:</label>
-			    <form:input type="text" path="endDate" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Ej: 25-10-2020" />
-			    <small id="nameHelp" class="form-text text-muted">Fecha de finalización de reserva</small>
-			  </div>
+			  
 			  <button type="submit" class="btn btn-primary">Enviar</button>
 			</form:form>
 		</div>

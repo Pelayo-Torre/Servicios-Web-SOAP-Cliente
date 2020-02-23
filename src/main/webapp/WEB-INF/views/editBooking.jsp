@@ -18,7 +18,7 @@
 <body>
 	<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
 	
-	<h3 class="centered">Nueva Reserva.</h3>
+	<h3 class="centered">Actualizar reserva.</h3>
 	<br>
 	<section>
 		<c:if test="${ error ne '' }">
@@ -33,8 +33,9 @@
 		
 		<h6>Rellene el siguiente formulario</h6>
 		<div>
-			<form:form modelAttribute="booking" action="/Amazin/bookings/add" method="POST">
-			  <form:input path="idClient" type="hidden" value="${idClient}"/>
+			<form:form modelAttribute="bookingEdit" action="/Amazin/bookings/edit" method="POST">
+			  <form:input type="hidden" path="idBooking" class="form-control" id="exampleInputEmail1" />
+			  <form:input type="hidden" path="idClient" class="form-control" id="exampleInputEmail1" />
 			  <div class="form-group">
 			    <label for="exampleInputEmail1">Fecha de Inicio:</label>
 			    <form:input type="text" path="startDate" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Ej: 22-10-2020" />
@@ -44,6 +45,10 @@
 			    <label for="exampleInputEmail1">Fecha de Finalización:</label>
 			    <form:input type="text" path="endDate" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Ej: 25-10-2020" />
 			    <small id="nameHelp" class="form-text text-muted">Fecha de finalización de reserva</small>
+			  </div>
+			  <div class="form-group">
+			  	<form:radiobutton path="cancelled" value="1"/>Cancelada
+				<form:radiobutton path="cancelled" value="0"/>No cancelada
 			  </div>
 			  <button type="submit" class="btn btn-primary">Enviar</button>
 			</form:form>

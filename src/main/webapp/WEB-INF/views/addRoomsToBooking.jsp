@@ -33,8 +33,8 @@
 		
 		<h6>Rellene el siguiente formulario</h6>
 		<div>
-			<form:form modelAttribute="booking" action="/Amazin/bookings/add" method="POST">
-			  <form:input path="idClient" type="hidden" value="${idClient}"/>
+			<form:form modelAttribute="room" action="/Amazin/rooms/add" method="POST">
+			  <form:input path="idClient" type="text"/>
 			  <div class="form-group">
 			    <label for="exampleInputEmail1">Fecha de Inicio:</label>
 			    <form:input type="text" path="startDate" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Ej: 22-10-2020" />
