@@ -6,6 +6,8 @@
 	<spring:url value="/clients/list" var="listClients"></spring:url>
 	<spring:url value="/services/add" var="newService"></spring:url>
 	<spring:url value="/services/list" var="listServices"></spring:url>
+	<spring:url value="/rooms/add" var="newRoom"></spring:url>
+	<spring:url value="/rooms/list" var="listRooms"></spring:url>
 	
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 	  <!-- Links -->
@@ -35,14 +37,13 @@
 	      </div>
 	    </li>
 	    
-	    <!-- Dropdown -->
 	    <li class="nav-item dropdown">
 	      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-	        Reserva
+	        Habitación
 	      </a>
 	      <div class="dropdown-menu">
-	        <a class="dropdown-item" href="#">Nueva Reserva</a>
-	        <a class="dropdown-item" href="#">Lista de Reservas</a>
+	        <a class="dropdown-item" href="${ newRoom }">Nueva Habitacion</a>
+	        <a class="dropdown-item" href="${ listRooms }">Lista de Habitaciones</a>
 	      </div>
 	    </li>
 	    

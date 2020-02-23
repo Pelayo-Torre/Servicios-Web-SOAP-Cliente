@@ -17,56 +17,55 @@
 <body>
 	
 	<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
-	<h3 class="centered">Clientes del Hotel</h3>
+	<h3 class="centered">Habitaciones del Hotel</h3>
 	<br>
 	<section>
 		<article>
-			<label class="mytitle">Listado de clientes:</label><br>
+			<label class="mytitle">Listado de habitaciones:</label><br>
 			<table class="table table-striped">
 			  <thead class="thead-dark">
 			    <tr>
-			      <th scope="col">Nombre</th>
-			      <th scope="col">Email</th>
-			      <th scope="col">DNI</th>
-			      <th scope="col">Telefono</th>
+			      <th scope="col">Código</th>
+			      <th scope="col">Precio</th>
+			      <th scope="col">Tipo</th>
 			      <th scope="col">Estado</th>
 			      <th scope="col"></th>
-				  <th scope="col"></th>
 			    </tr>
 			  </thead>
 			  <tbody>
-			  	<c:forEach var="client" items="${clients}">
+			  	<c:forEach var="room" items="${rooms}">
 			  	
-		  			<spring:url value="/clients/edit/{id}" var="edit">
-				   		<spring:param name="id" value="${ client.idClient }" />
+		  			<spring:url value="/rooms/edit/{id}" var="edit">
+				   		<spring:param name="id" value="${ room.id }" />
 				 	</spring:url>
 				 
-					 <spring:url value="/clients/desactivate/{id}" var="desactivate">
-					   <spring:param name="id" value="${ client.idClient }" />
-					 </spring:url>
-					 
-					 <spring:url value="/bookings/list/{idClient}" var="bookings">
-					   <spring:param name="idClient" value="${ client.idClient }" />
+					 <spring:url value="/rooms/desactivate/{id}" var="desactivate">
+					   <spring:param name="id" value="${ room.id }" />
 					 </spring:url>
 			  	
 				    <tr>
-				      <th scope="row">${client.name }</th>
-				      <td>${client.email }</td>
-				      <td>${client.dni }</td>
+				      <th scope="row">${room.code }</th>
+				      <td>${room.price }</td>
 				      
-				      <td>${client.telephone }</td>
-				      
-				      <c:if test="${ client.active == '1' }">
+				      <c:if test="${room.type == '0' }">
+				      	<td>INDIVIDUAL</td>
+				      </c:if>
+				      <c:if test="${room.type == '1' }">
+				      	<td>DOBLE</td>
+				      </c:if>
+				      <c:if test="${room.type == '2' }">
+				      	<td>MATRIMONIAL</td>
+				      </c:if>
+				      				      
+				      <c:if test="${ room.active == '1' }">
 				      	<td>ACTIVO</td>
 				      	<td><a href="${ edit }" title="Editar"><span class="fas fa-edit"></span></a>  |  
 				      	<a href="${ desactivate }" title="Desactivar"><span class="fas fa-trash"></span></a></td>
 				      </c:if>
-				      <c:if test="${ client.active == '0' }">
+				      <c:if test="${ room.active == '0' }">
 				      	<td>INACTIVO</td>
 				      	<td><a href="${ edit }" title="Editar"><span class="fas fa-edit"></span></a></td>
 				      </c:if>
-				      
-				      <td><a class="btn btn-primary" href="${ bookings }" role="button">Reservas</a></td>
 				      
 				    </tr>
 			  	
